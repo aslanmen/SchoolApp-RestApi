@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "1234",
+    "database": "sequlize",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "1234",
+    "database": "sequlize_test",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "1234",
+    "database": "sequlize_production",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}

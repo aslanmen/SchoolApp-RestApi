@@ -1,0 +1,1254 @@
+{
+	"info": {
+		"_postman_id": "1a98fa79-0dcd-4290-9f6f-7750993e1c0c",
+		"name": "School App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28094983"
+	},
+	"item": [
+		{
+			"name": "Manager",
+			"item": [
+				{
+					"name": "ManagerSignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ahmet\",\r\n    \"surname\":\"aslan\",\r\n    \"tel\":\"05347896521\",\r\n    \"email\":\"aslan@gmail.com\",\r\n    \"password\":\"1234\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/managers/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"managers",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ManagerSignIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"email\":\"aslan@gmail.com\",\r\n     \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/managers/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"managers",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ManagerGetAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTMwMjQ5NiwiZXhwIjoxNzIxMzA5Njk2fQ.pVrNRUc_Rks2-73AX6spis-rIrlr17PERynRuBWFtA4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "aut",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/managers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"managers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ManagerGetId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTMwMjQ5NiwiZXhwIjoxNzIxMzA5Njk2fQ.pVrNRUc_Rks2-73AX6spis-rIrlr17PERynRuBWFtA4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/managers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"managers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ManagerUpdate",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTMwMjQ5NiwiZXhwIjoxNzIxMzA5Njk2fQ.pVrNRUc_Rks2-73AX6spis-rIrlr17PERynRuBWFtA4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ahmet\",\r\n    \"surname\":\"aslan\",\r\n    \"tel\":\"05347896521\",\r\n    \"email\":\"aslan1@gmail.com\",\r\n    \"password\":\"1234\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/managers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"managers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ManagerDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTMwMjQ5NiwiZXhwIjoxNzIxMzA5Njk2fQ.pVrNRUc_Rks2-73AX6spis-rIrlr17PERynRuBWFtA4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/managers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"managers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teacher",
+			"item": [
+				{
+					"name": "TeacherSignUp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTMwMjQ5NiwiZXhwIjoxNzIxMzA5Njk2fQ.pVrNRUc_Rks2-73AX6spis-rIrlr17PERynRuBWFtA4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ahmet\",\r\n    \"surname\":\"aslan\",\r\n    \"tel\":\"05347896521\",\r\n    \"email\":\"aslan@gmail.com\",\r\n    \"password\":\"1234\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/teachers/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teachers",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TeacherSignIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"email\":\"aa0slsaa5@gmail.com\",\r\n     \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/teachers/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teachers",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TeacherGetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTMwMjQ5NiwiZXhwIjoxNzIxMzA5Njk2fQ.pVrNRUc_Rks2-73AX6spis-rIrlr17PERynRuBWFtA4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/teachers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teachers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TeacherGetId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTMwMjQ5NiwiZXhwIjoxNzIxMzA5Njk2fQ.pVrNRUc_Rks2-73AX6spis-rIrlr17PERynRuBWFtA4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/teachers/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teachers",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TeacherUpdate",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTMwMjQ5NiwiZXhwIjoxNzIxMzA5Njk2fQ.pVrNRUc_Rks2-73AX6spis-rIrlr17PERynRuBWFtA4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ahmet1\",\r\n    \"surname\":\"aslan\",\r\n    \"tel\":\"05347896521\",\r\n    \"email\":\"aslan@gmail.com\",\r\n    \"password\":\"1234\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/teachers/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teachers",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TeacherDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTQ2MjI5MywiZXhwIjoxNzIxNDY5NDkzfQ.aZchs9jILqMSbG8BUxzNHPQ_O9duoxEijqAtKJXjdQI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/teachers/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teachers",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TeacherGiveNote",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjEwLCJpYXQiOjE3MjEzMDc1MTIsImV4cCI6MTcyMTMxNDcxMn0.ETSmU34zbhyGfVqW9Kxnk930LjcTlWdblm-jEHz6zJI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"note\":70,\r\n    \"lessonId\":10,\r\n    \"studentId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/teachers/2/notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teachers",
+								"2",
+								"notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TeacherGetNote",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjEwLCJpYXQiOjE3MjEzMDc1MTIsImV4cCI6MTcyMTMxNDcxMn0.ETSmU34zbhyGfVqW9Kxnk930LjcTlWdblm-jEHz6zJI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/teachers/2/notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teachers",
+								"2",
+								"notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TeacherUpdateNote",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjEwLCJpYXQiOjE3MjEzMDc1MTIsImV4cCI6MTcyMTMxNDcxMn0.ETSmU34zbhyGfVqW9Kxnk930LjcTlWdblm-jEHz6zJI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"note\":\"50\",\r\n    \"lessonId\":10,\r\n    \"studentId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/teachers/2/notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teachers",
+								"2",
+								"notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TeacherNoteDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjEwLCJpYXQiOjE3MjEzMDc1MTIsImV4cCI6MTcyMTMxNDcxMn0.ETSmU34zbhyGfVqW9Kxnk930LjcTlWdblm-jEHz6zJI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lessonId\":10,\r\n    \"studentId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/teachers/2/notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teachers",
+								"2",
+								"notes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Class",
+			"item": [
+				{
+					"name": "ClassCreate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTMzNTk2NiwiZXhwIjoxNzIxMzQzMTY2fQ.9QxeS-Ci_2ymiaNPven142WW5FnitDDWZOQsRJzjQy0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"name\":\"derslik1\",\r\n    \"teacherId\":4\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/classes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"classes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StudentClassAdd",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"studentId\":4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/classes/8/student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"classes",
+								"8",
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ClassGetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTMzNTk2NiwiZXhwIjoxNzIxMzQzMTY2fQ.9QxeS-Ci_2ymiaNPven142WW5FnitDDWZOQsRJzjQy0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/classes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"classes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ClassGetId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTMzNTk2NiwiZXhwIjoxNzIxMzQzMTY2fQ.9QxeS-Ci_2ymiaNPven142WW5FnitDDWZOQsRJzjQy0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/classes/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"classes",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ClassUpdate",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTMzNTk2NiwiZXhwIjoxNzIxMzQzMTY2fQ.9QxeS-Ci_2ymiaNPven142WW5FnitDDWZOQsRJzjQy0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"teacherId\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/classes/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"classes",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ClassDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTMzNTk2NiwiZXhwIjoxNzIxMzQzMTY2fQ.9QxeS-Ci_2ymiaNPven142WW5FnitDDWZOQsRJzjQy0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/classes/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"classes",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StudentClassDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTM4NjY2NiwiZXhwIjoxNzIxMzkzODY2fQ.ZA5SBYf8PKoEM0IvBmCtu6pJy7wE4AJM4vYPmon8rWc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentId\":10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/classes/6/student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"classes",
+								"6",
+								"student"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lesson",
+			"item": [
+				{
+					"name": "LessonCreate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTM4Nzg3MSwiZXhwIjoxNzIxMzk1MDcxfQ.eb6Os0XKrU6pB2tcluweUdTW_gn79SGfr8cWvmk8xhc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"matematik\",\r\n    \"description\":\"matematik 1\",\r\n    \"teacherId\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/lessons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LessonGetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTM4Nzg3MSwiZXhwIjoxNzIxMzk1MDcxfQ.eb6Os0XKrU6pB2tcluweUdTW_gn79SGfr8cWvmk8xhc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/lessons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LessonGetId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTM4Nzg3MSwiZXhwIjoxNzIxMzk1MDcxfQ.eb6Os0XKrU6pB2tcluweUdTW_gn79SGfr8cWvmk8xhc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/lessons/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"lessons",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LessonUpdate",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTM4Nzg3MSwiZXhwIjoxNzIxMzk1MDcxfQ.eb6Os0XKrU6pB2tcluweUdTW_gn79SGfr8cWvmk8xhc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"fen\",\r\n    \"teacherId\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/lessons/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"lessons",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LessonDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTM4Nzg3MSwiZXhwIjoxNzIxMzk1MDcxfQ.eb6Os0XKrU6pB2tcluweUdTW_gn79SGfr8cWvmk8xhc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/lessons/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"lessons",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StudentLessonAdd",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTM5NzIxNiwiZXhwIjoxNzIxNDA0NDE2fQ.DW-ghjeIp3Tt2mIX8pT0YE4bDmHH-o8GGJbuvVt9hwg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"studentIds\":[13]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/lessons/6/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"lessons",
+								"6",
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StudentLessonGet",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTM4Nzg3MSwiZXhwIjoxNzIxMzk1MDcxfQ.eb6Os0XKrU6pB2tcluweUdTW_gn79SGfr8cWvmk8xhc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/lessons/5/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"lessons",
+								"5",
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StudentLessonDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTM4Nzg3MSwiZXhwIjoxNzIxMzk1MDcxfQ.eb6Os0XKrU6pB2tcluweUdTW_gn79SGfr8cWvmk8xhc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentIds\":[4,3]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/lessons/5/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"lessons",
+								"5",
+								"students"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "StudentSignUp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTM5NzIxNiwiZXhwIjoxNzIxNDA0NDE2fQ.DW-ghjeIp3Tt2mIX8pT0YE4bDmHH-o8GGJbuvVt9hwg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "postman-cloud:///1ef45d69-5677-4d00-af9a-6ba2cf2c98dc"
+								},
+								{
+									"key": "name",
+									"value": "ahmet",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "aslan",
+									"type": "text"
+								},
+								{
+									"key": "tel",
+									"value": "02456329871",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "image@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/students/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"students",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StudentSignIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"aslan@gmail.com\",\r\n    \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/students/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"students",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StudentGetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTM4Nzg3MSwiZXhwIjoxNzIxMzk1MDcxfQ.eb6Os0XKrU6pB2tcluweUdTW_gn79SGfr8cWvmk8xhc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StudentGetId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTM4Nzg3MSwiZXhwIjoxNzIxMzk1MDcxfQ.eb6Os0XKrU6pB2tcluweUdTW_gn79SGfr8cWvmk8xhc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/students/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"students",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StudentUpdate",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTM4Nzg3MSwiZXhwIjoxNzIxMzk1MDcxfQ.eb6Os0XKrU6pB2tcluweUdTW_gn79SGfr8cWvmk8xhc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"mehmet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/students/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"students",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StudentDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjUsImlhdCI6MTcyMTM4Nzg3MSwiZXhwIjoxNzIxMzk1MDcxfQ.eb6Os0XKrU6pB2tcluweUdTW_gn79SGfr8cWvmk8xhc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/students/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"students",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetStududentLessonProgram",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjExLCJpYXQiOjE3MjEzOTA1OTgsImV4cCI6MTcyMTM5Nzc5OH0.EA93QCz0QyzuCS_2OpIzboSnTA6XAQKH-9s9bVLckOQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/students/8/lessons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"students",
+								"8",
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StudentGetNote",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOjExLCJpYXQiOjE3MjEzOTA1OTgsImV4cCI6MTcyMTM5Nzc5OH0.EA93QCz0QyzuCS_2OpIzboSnTA6XAQKH-9s9bVLckOQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/students/2/notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"students",
+								"2",
+								"notes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
